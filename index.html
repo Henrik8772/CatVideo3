@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatVideo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #302f2f;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        p {
+            color: #ffffff;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to CatVideo</h1>
+    <p id="troll-message" style="display:none;">You have been fucking trolled</p>
+    <video id="cat-video" width="560" height="315" controls autoplay>
+        <source src="CatVideo3.mp4" type="video/mp4">
+    </video>
+    <script>
+        const video = document.getElementById('cat-video');
+        const message = document.getElementById('troll-message');
+        video.addEventListener('play', function () {
+            setTimeout(function () {
+                message.style.display = 'block';
+            }, 800); // 0.8 second delay
+        });
+    </script>
+</body>
+
+</html>
